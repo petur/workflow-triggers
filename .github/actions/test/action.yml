@@ -7,6 +7,9 @@ inputs:
     default: 'Default value'
 runs:
   using: composite
+  defaults:
+    run:
+      shell: bash
   steps:
   - run: 'echo step the first'
   - run: 'echo ${{ inputs.an_input }}'
