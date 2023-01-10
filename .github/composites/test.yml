@@ -1,0 +1,13 @@
+name: Composite name
+description: This is the description
+inputs:
+  an_input:
+    description: 'A composite input'
+    required: true
+    default: 'Default value'
+runs:
+  using: composite
+  steps:
+  - run: 'echo step the first'
+  - run: 'echo ${{ inputs.an_input }}'
+  - run: 'echo step the last'

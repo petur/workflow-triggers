@@ -13,4 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: 'echo "foo: ${{ inputs.foo }}"'
-
+    - name: 'Step name'
+      uses: composites/test
+      with:
+        an_input: 'A provided values'
