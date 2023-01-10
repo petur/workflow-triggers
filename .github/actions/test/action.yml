@@ -12,5 +12,7 @@ runs:
     shell: bash
   - run: 'echo ${{ inputs.an_input }}'
     shell: bash
+  - run: 'echo job: ${{ github.job }} workflow: ${{ github.workflow }}'
+    shell: bash
   - run: 'echo step the last'
     shell: bash
