@@ -12,6 +12,7 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - run: 'echo "foo: ${{ inputs.foo }}"'
     - name: 'Step name'
       uses: ./.github/actions/test
