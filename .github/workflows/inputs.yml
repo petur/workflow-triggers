@@ -14,6 +14,6 @@ jobs:
     steps:
     - run: 'echo "foo: ${{ inputs.foo }}"'
     - name: 'Step name'
-      uses: composites/test
+      uses: ../composites/test.yml
       with:
         an_input: 'A provided values'
