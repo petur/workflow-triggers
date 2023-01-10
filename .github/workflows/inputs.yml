@@ -6,7 +6,6 @@ on:
     inputs:
       foo:
         description: A footastic input
-        default: 'This is the default'
         type: string
 
 jobs:
