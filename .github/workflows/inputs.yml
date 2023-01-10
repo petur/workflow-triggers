@@ -13,5 +13,5 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-    - run: echo ${{ inputs.foo }}
+    - run: echo "foo: <${{ inputs.foo }}>"
 
