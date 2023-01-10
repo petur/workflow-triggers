@@ -1,0 +1,17 @@
+name: Inputs
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      foo:
+        description: A footastic input
+        default: 'This is the default'
+        type: string
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo ${{ inputs.foo }}
+
