@@ -1,0 +1,16 @@
+name: Choice
+
+on:
+  workflow_dispatch:
+    inputs:
+      select:
+        type: choice
+        options:
+        - One
+        - Two
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo ${{ inputs.select }}
