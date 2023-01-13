@@ -6,4 +6,4 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - run: echo o hai
+    - run: echo o hai branch
