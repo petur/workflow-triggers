@@ -1,0 +1,11 @@
+on:
+  workflow_run:
+    workflow:
+    - Workflow name
+
+jobs:
+  stuff:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo Hello
+
