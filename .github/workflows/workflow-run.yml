@@ -1,6 +1,6 @@
 on:
   workflow_run:
-    workflow:
+    workflows:
     - Workflow name
 
 jobs:
