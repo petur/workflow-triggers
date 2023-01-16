@@ -1,6 +1,7 @@
 name: Choice
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       select:
@@ -14,3 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo ${{ inputs.select }}
+    - run: echo ${{ github.ref == 'refs/heads/main' && 'is main' || 'is not main' }}
