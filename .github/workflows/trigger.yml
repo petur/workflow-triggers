@@ -7,4 +7,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo o hai
-    - run: curl --fail-with-body https://api.github.com/repos/tempo-io/cotton/check-runs
