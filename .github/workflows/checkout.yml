@@ -1,0 +1,10 @@
+name: Checkout shallow
+
+on: push
+
+jobs:
+  shallow:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
