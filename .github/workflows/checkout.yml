@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: git fetch origin refs/heads/main
-    - run: git br -a
+    - run: git branch -a
     - run: git log --oneline
     - run: git log --oneline origin/main
