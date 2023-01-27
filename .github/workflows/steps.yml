@@ -1,0 +1,23 @@
+name: Workflow name
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo success
+    - id: success
+      run: echo more success
+    - if: ${{ always() }}
+      run: |
+        echo "fail"
+        exit 1
+    - if: ${{ always() }}
+      id: phail
+      run: |
+        echo "phail" 
+        exit 2
+    - if: ${{ always() }}
+      run: |
+        jq 'to_entries[] | select(.value.outcome == "failure")' <<<'${{ toJSON(steps) }}'
