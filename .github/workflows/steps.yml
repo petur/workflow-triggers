@@ -6,4 +6,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - run: sleep 50
+    - run: |
+        trap "echo trap" SIGINT
+        sleep 50
